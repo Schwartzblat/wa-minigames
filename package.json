@@ -1,0 +1,12 @@
+{
+  "name": "wa-minigames",
+  "version": "1.0.0",
+  "description": "module that helps creating minigames with whatsapp-web.js module",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alon Schwartzblat",
+  "license": "ISC"
+}
