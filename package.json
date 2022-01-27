@@ -1,10 +1,13 @@
 {
   "name": "wa-minigames",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "module that helps creating minigames with whatsapp-web.js module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Schwartzblat/wa-minigames.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Schwartzblat/wa-minigames/issues"
   },
   "keywords": [
     "whatsapp",
@@ -15,9 +18,6 @@
   ],
   "main": "./index.js",
   "typings": "./index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Alon Schwartzblat",
   "license": "ISC"
 }
