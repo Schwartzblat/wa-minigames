@@ -1,7 +1,18 @@
 {
   "name": "wa-minigames",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "module that helps creating minigames with whatsapp-web.js module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schwartzblat/wa-minigames.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "bot",
+    "minigame",
+    "game"
+  ],
   "main": "./index.js",
   "typings": "./index.d.ts",
   "scripts": {
