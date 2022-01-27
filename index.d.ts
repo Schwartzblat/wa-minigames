@@ -3,10 +3,10 @@ export namespace WAMiniGame {
         private gameMap: object;
         constructor()
 
-        addGameChat(chatId: string, game: MiniGame|Function, message?: WAWebJS.Message, client?: WAWebJS.Client): Promise<boolean>
+        addGameChat(chatId: string, game: MiniGame|Function, message?: WAWebJS.Message, client?: WAWebJS.Client): boolean
 
-        removeGameChat(chatId: string|MiniGame): Promise<boolean>
-        removeGameChat(game: MiniGame|string): Promise<boolean>
+        removeGameChat(chatId: string|MiniGame): boolean
+        removeGameChat(game: MiniGame|string): boolean
 
         forwardMsg(message: WAWebJS.Message, client: WAWebJS.Client): Promise<void>
     }
@@ -15,7 +15,7 @@ export namespace WAMiniGame {
         _parent: MiniGames
         procMessage(message: WAWebJS.Message, client?: WAWebJS.Client): Promise<void>
 
-        gameOver(message: WAWebJS.Message, client?: WAWebJS.Client): Promise<void>
+        gameOver(message: WAWebJS.Message, client?: WAWebJS.Client): void
         setParent(parent: MiniGames): void
     }
 }

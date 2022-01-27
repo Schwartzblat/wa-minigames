@@ -1,4 +1,3 @@
-const wa = require('whatsapp-web.js');
 class MiniGames{
   #gameMap;
 
@@ -10,9 +9,9 @@ class MiniGames{
    * @param {MiniGame|function} game
    * @param {WAWebJS.Message} message
    * @param {WAWebJS.Client} client
-   * @return {Promise<boolean>}
+   * @return {boolean}
    */
-  async addGameChat(chatId, game, message, client){
+  addGameChat(chatId, game, message, client){
     if(this.#gameMap[chatId]){
       return false;
     }
@@ -27,9 +26,9 @@ class MiniGames{
 
   /**
    * @param {MiniGame|string} game
-   * @return {Promise<boolean>}
+   * @return {boolean}
    */
-  async removeGameChat(game){
+  removeGameChat(game){
     if (typeof game === 'string') {
       if(this.#gameMap[game]) {
         delete this.#gameMap[game];
@@ -57,7 +56,7 @@ class MiniGames{
   }
 }
 class MiniGame{
-  _parent;
+  #parent;
   /**
    * @param {WAWebJS.Message} message
    * @param {WAWebJS.Client} client
@@ -68,15 +67,17 @@ class MiniGame{
   /**
    * @param {WAWebJS.Message} message
    * @param {WAWebJS.Client} client
-   * @return {Promise<void>}
+   * @return {void}
    */
-  async gameOver(message, client=undefined){}
+  gameOver(message, client=undefined){
+    this.#parent.removeGameChat(this);
+  }
 
   /**
    * @param {MiniGames} newParent
    */
   setParent(newParent){
-    this._parent = newParent;
+    this.#parent = newParent;
   }
 
 }
