@@ -27,7 +27,7 @@ class MyGame extends MiniGame {
             await this.client.sendMessage(this.chatId, 'You are wrong.');
         }
     }
-    async gameOver(){
+    gameOver(){
         super.gameOver();
     }
 }
