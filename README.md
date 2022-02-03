@@ -33,6 +33,7 @@ class MyGame extends MiniGame {
 }
 
 const client = new Client();
+const minigames = new Minigames();
 client.on('qr', (qr) => {
     console.log('QR RECEIVED', qr);
 });
@@ -43,9 +44,9 @@ client.on('ready', () => {
 
 client.on('message', async (msg) => {
     if (msg.body == '!start') {
-        await Minigames.addGameChat(msg.getChatId(), new MyGame(msg, client));
+        await minigames.addGameChat(msg.getChatId(), new MyGame(msg, client));
     }
-    Minigames.forwardMessage(msg);
+    minigames.forwardMessage(msg);
 });
 
 client.initialize();
