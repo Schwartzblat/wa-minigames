@@ -1,6 +1,6 @@
 {
   "name": "wa-minigames",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "module that helps creating minigames with whatsapp-web.js module",
   "repository": {
     "type": "git",

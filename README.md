@@ -44,7 +44,7 @@ client.on('ready', () => {
 
 client.on('message', async (msg) => {
     if (msg.body == '!start') {
-        await minigames.addGameChat(msg.getChatId(), new MyGame(msg, client));
+        await minigames.addGameChat(msg._getChatId(), new MyGame(msg, client));
     }
     minigames.forwardMessage(msg);
 });
