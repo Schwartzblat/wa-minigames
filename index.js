@@ -49,7 +49,7 @@ class MiniGames{
    * @return {Promise<void>}
    */
   async forwardMsg(message, client){
-    const minigame = this.#gameMap[message.getChatId()];
+    const minigame = this.#gameMap[message._getChatId()];
     if (minigame){
       minigame.game.procMessage(message, client);
     }

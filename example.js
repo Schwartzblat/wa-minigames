@@ -1,13 +1,3 @@
-# wa-minigames
-A module that helps you to create minigames with <a href="https://github.com/pedroslopez/whatsapp-web.js" target="_blank">whatsapp-web.js</a>.
-## Installation
-
-```console
-npm install whatsapp-web.js
-npm install wa-minigames
-```
-## Example Usage
-```js
 const { Client } = require('whatsapp-web.js');
 const { MiniGames, MiniGame } = require('index.js');
 class MyGame extends MiniGame {
@@ -49,5 +39,3 @@ client.on('message_create', async (msg) => {
 });
 
 client.initialize();
-
-```
