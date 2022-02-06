@@ -9,7 +9,7 @@ npm install wa-minigames
 ## Example Usage
 ```js
 const { Client } = require('whatsapp-web.js');
-const { MiniGames, MiniGame } = require('index.js');
+const { MiniGames, MiniGame } = require('wa-minigames');
 class MyGame extends MiniGame {
     constructor(message, client){
         super();
